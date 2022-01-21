@@ -32,15 +32,6 @@ public class AnimalListReply extends BaseEntity {
 	@Column(name="list_reply_content", length=200, nullable=true)
 	private int list_reply_content;
 	
-	@Column(name="inst_dtm", nullable=false, columnDefinition="datetime default CURRENT_TIMESTAMP")
-	private Date inst_dtm;
-	
-	@Column(name="updt_dtm", columnDefinition="datetime")
-	private Date updt_dtm;
-	
-	@Column(name="del_dtm", columnDefinition="datetime")
-	private Date del_dtm;
-	
 	@Column(name="list_num", nullable=false)
 	private int list_num;
 	

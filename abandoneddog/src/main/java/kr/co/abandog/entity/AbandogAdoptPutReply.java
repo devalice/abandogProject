@@ -25,7 +25,7 @@ public class AbandogAdoptPutReply extends BaseEntity{
 		
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name="animal_adopt_put_reply", nullable=false)
+@Column(name="abandog_adopt_put_reply", nullable=false)
 private int put_reply_num;
 
 @Column(name="put_reply_content", length=200, nullable=true)

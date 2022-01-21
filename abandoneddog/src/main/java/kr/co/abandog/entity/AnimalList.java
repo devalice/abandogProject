@@ -43,15 +43,6 @@ public class AnimalList extends BaseEntity {
 	
 	@Column(name="list_datetime", columnDefinition="datetime")
 	private Date list_datetime;
-		
-	@Column(name="isnt_dtm", nullable=false, columnDefinition="datetime default CURRENT_TIMESTAMP")
-	private Date inst_dtm;
-		
-	@Column(name="updt_dtm", columnDefinition="datetime")
-	private Date updt_dtm;
-	
-	@Column(name="del_dtm", columnDefinition="datetime")
-	private Date del_dtm;
 	
 	@Column(name="list_writer", length=20, nullable=false)
 	private String list_writer;

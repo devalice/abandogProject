@@ -20,7 +20,7 @@ import lombok.ToString;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AbandogStateCD {
+public class AbandogStateCD extends BaseEntity{
 	
 	@Id
 	@Column(name="state_cd", length=1, columnDefinition = "char")
@@ -28,14 +28,5 @@ public class AbandogStateCD {
 	
 	@Column(name="state_name", length=30, nullable= false)
 	private String state_name;
-	
-	@Column(name="inst_dtm", columnDefinition = "datetime default CURRENT_TIMESTAMP")
-	private Date inst_dtm;
-	
-	@Column(name="updt_dtm", columnDefinition = "datetime")
-	private Date updt_dtm;
-	
-	@Column(name="del_dtm", columnDefinition = "datetime")
-	private Date del_dtm;
 
 }

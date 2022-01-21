@@ -1,4 +1,4 @@
-package kr.co.abandog.dao;
+package kr.co.abandog.repository;
 
 import java.util.List;
 
@@ -10,8 +10,7 @@ import kr.co.abandog.entity.AbandogStateCD;
 import kr.co.abandog.entity.AbandogTypeCD;
 import kr.co.abandog.entity.Member;
 
-public interface MemberRepository extends JpaRepository<Member, String>{
-	
+public interface MemberRepository extends JpaRepository<Member, Long>{
 	@Query("select m from Member m order by m.member_id")
 	List<Member> getListASC();
 	
@@ -23,5 +22,4 @@ public interface MemberRepository extends JpaRepository<Member, String>{
 	
 	@Query("select t1 from AbandogTypeCD t1 order by t1.type_cd")
 	List<AbandogTypeCD> getListAbandogTypeCDASC();
-
 }

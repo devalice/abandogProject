@@ -20,7 +20,7 @@ import lombok.ToString;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Abandog {
+public class Abandog extends BaseEntity{
 	
 	@Id
 	@Column(name="abandog_id", length=30)
@@ -46,15 +46,6 @@ public class Abandog {
 	
 	@Column(name="abandog_image", length=200)
 	private String abandog_image;
-	
-	@Column(name="inst_dtm", columnDefinition = "datetime default CURRENT_TIMESTAMP")
-	private Date inst_dtm;
-	
-	@Column(name="updt_dtm", columnDefinition = "datetime")
-	private Date updt_dtm;
-	
-	@Column(name="del_dtm", columnDefinition = "datetime")
-	private Date del_dtm;
 	
 	@Column(name="member_id", length=20)
 	private String member_id;

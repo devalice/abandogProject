@@ -25,11 +25,12 @@ public class AbandogAdoptPutReply extends BaseEntity{
 		
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name="abandog_adopt_put_reply", nullable=false)
+@Column(name="put_reply_num", nullable=false)
 private int put_reply_num;
 
 @Column(name="put_reply_content", length=200, nullable=true)
-private Date del_dtm;
+private String put_reply_content;
+
 
 @Column(name="put_num",nullable=false)
 private int put_num;

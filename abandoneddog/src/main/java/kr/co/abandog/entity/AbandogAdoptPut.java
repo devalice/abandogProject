@@ -30,12 +30,16 @@ private int put_num;
 		
 @Column(name="put_title", length=50, nullable=false)
 private String put_title;
+
 @Column(name="put_content", length=500)
 private String put_content;
+
 @Column(name="put_count")
 private int put_count;
+
 @Column(name="put_datetime", columnDefinition="datetime", nullable=false)
 private Date put_datetime;
+
 @Column(name="put_writer", length=20, nullable=false)
 private String put_writer;
 	

@@ -1,10 +1,11 @@
 package kr.co.abandog.entity;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -15,7 +16,7 @@ import lombok.ToString;
 
 @Entity
 @Table(name="abandog")
-@ToString
+@ToString(exclude = {"member", "stateCD","typeCD"})
 @Getter
 @Builder
 @AllArgsConstructor
@@ -47,12 +48,15 @@ public class Abandog extends BaseEntity{
 	@Column(name="abandog_image", length=200)
 	private String abandog_image;
 	
-	@Column(name="member_id", length=20)
-	private String member_id;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="member_email")
+	private Member member;
 	
-	@Column(name="state_cd", length=1, columnDefinition = "char")
-	private String state_cd;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="state_cd")
+	private AbandogStateCD stateCD;
 	
-	@Column(name="type_cd", length=1, columnDefinition = "char")
-	private String type_cd;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="type_cd")
+	private AbandogTypeCD typeCD;
 }

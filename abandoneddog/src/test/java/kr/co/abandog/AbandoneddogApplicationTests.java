@@ -18,46 +18,6 @@ class AbandoneddogApplicationTests {
 	@Autowired
 	private MemberRepository memberRepository;
 	
-	@Test
-	public void testDependency() {
-		System.out.println(memberRepository.getClass().getName());
-	}
-
-	//@Test
-	public void getMember() {
-		
-		List<Member> list = memberRepository.getListASC();
-		
-		for(Member member : list) {
-			System.out.println(member);
-		}
-	}
 	
-	//@Test
-	public void getAbandog() {
-		List<Abandog> list = memberRepository.getListAbandogASC();
-			
-		for(Abandog abandog : list) {
-			System.out.println(abandog);
-		}
-	}
-	
-	//@Test
-	public void getAbandogStateCD() {
-		List<AbandogStateCD> list = memberRepository.getListAbandogStateCDASC();
-		
-		for(AbandogStateCD aban : list) {
-			System.out.println(aban);
-		}
-	}
-	
-	@Test
-	public void getAbandogTypeCD() {
-		List<AbandogTypeCD> list = memberRepository.getListAbandogTypeCDASC();
-		
-		for(AbandogTypeCD aban : list) {
-			System.out.println(aban);
-		}
-	}
 
 }

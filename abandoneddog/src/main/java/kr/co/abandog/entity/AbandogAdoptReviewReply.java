@@ -30,10 +30,12 @@ public class AbandogAdoptReviewReply {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	@Column(name="review_reply_num")
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="review_reply_writer")
     private Member member; 
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
+	@JoinColumn(name="review_num")
     private AbandogAdoptReview abandogAdoptReview; 
 	
 	private String review_reply_writer;

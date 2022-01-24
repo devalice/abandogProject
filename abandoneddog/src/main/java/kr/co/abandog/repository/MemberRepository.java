@@ -11,4 +11,5 @@ import kr.co.abandog.entity.AbandogTypeCD;
 import kr.co.abandog.entity.Member;
 
 public interface MemberRepository extends JpaRepository<Member, Long>{
+
 }

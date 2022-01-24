@@ -18,6 +18,4 @@ class AbandoneddogApplicationTests {
 	@Autowired
 	private MemberRepository memberRepository;
 	
-	
-
 }

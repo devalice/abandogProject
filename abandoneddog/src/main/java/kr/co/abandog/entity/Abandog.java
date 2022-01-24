@@ -23,6 +23,7 @@ import lombok.ToString;
 @NoArgsConstructor
 public class Abandog extends BaseEntity{
 	
+	
 	@Id
 	@Column(name="abandog_id", length=30)
 	private String abandog_id;

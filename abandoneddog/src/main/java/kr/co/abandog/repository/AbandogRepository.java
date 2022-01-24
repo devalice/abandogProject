@@ -6,4 +6,5 @@ import kr.co.abandog.entity.Abandog;
 
 public interface AbandogRepository extends JpaRepository<Abandog, Long>{
 
+	
 }

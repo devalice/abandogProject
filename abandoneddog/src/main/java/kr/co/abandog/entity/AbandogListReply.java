@@ -1,7 +1,5 @@
 package kr.co.abandog.entity;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,15 +12,15 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
+ 
 @Entity
-@Table(name="animal_list_reply")
+@Table(name="abandog_list_reply")
 @ToString
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AnimalListReply extends BaseEntity {
+public class AbandogListReply extends BaseEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

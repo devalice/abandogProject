@@ -14,15 +14,15 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
+ 
 @Entity
-@Table(name="animal_list")
+@Table(name="abandog_list")
 @ToString
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AnimalList extends BaseEntity {
+public class AbandogList extends BaseEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

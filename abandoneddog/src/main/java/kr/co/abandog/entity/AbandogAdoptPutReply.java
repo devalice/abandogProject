@@ -37,5 +37,11 @@ private int put_num;
 
 @Column(name="reply_writer", length=20, nullable=false)
 private String reply_writer;
+
+@ManyToOne(fetch = FetchType.LAZY) 
+private Member member;
+
+@ManyToOne(fetch = FetchType.LAZY) 
+private AbandogAdoptPut abandogAdoptPut;
 	
 }

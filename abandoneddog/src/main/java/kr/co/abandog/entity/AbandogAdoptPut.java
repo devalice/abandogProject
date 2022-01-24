@@ -42,6 +42,10 @@ private Date put_datetime;
 
 @Column(name="put_writer", length=20, nullable=false)
 private String put_writer;
+
+@ManyToOne(fetch = FetchType.LAZY) 
+private Member member;
+
 	
 
 }

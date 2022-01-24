@@ -12,6 +12,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import javax.persistence.ManyToOne;
+import javax.persistence.FetchType;
 
 @Entity
 @Table(name="abandog_adopt_put_reply")
@@ -37,5 +39,11 @@ private int put_num;
 
 @Column(name="reply_writer", length=20, nullable=false)
 private String reply_writer;
+
+@ManyToOne(fetch = FetchType.LAZY) 
+private Member member;
+
+@ManyToOne(fetch = FetchType.LAZY) 
+private AbandogAdoptPut abandogAdoptPut;
 	
 }

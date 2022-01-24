@@ -11,6 +11,9 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import javax.persistence.ManyToOne;
+import javax.persistence.FetchType;
+
 
 
 //데이터베이스 테이블과 연동
@@ -42,6 +45,10 @@ private Date put_datetime;
 
 @Column(name="put_writer", length=20, nullable=false)
 private String put_writer;
+
+@ManyToOne(fetch = FetchType.LAZY) 
+private Member member;
+
 	
 
 }

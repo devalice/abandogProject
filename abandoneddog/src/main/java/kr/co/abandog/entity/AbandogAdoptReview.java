@@ -34,7 +34,7 @@ public class AbandogAdoptReview extends BaseEntity {
 	@ManyToOne(fetch = FetchType.LAZY) 
     private Member member; 
 	
-	@@OneToOne(fetch = FetchType.LAZY) 
+	@OneToOne(fetch = FetchType.LAZY) 
     private Abandog abandog; 
 	
 	@Column(name="review_content", length=500)

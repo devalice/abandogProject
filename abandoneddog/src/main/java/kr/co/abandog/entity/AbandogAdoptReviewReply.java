@@ -15,6 +15,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import kr.co.abandog.entity.Member;
+import kr.co.abandog.entity.AbandogAdoptReview;
+
 @Entity
 @Table(name="abandog_adopt_review_reply")
 @ToString
@@ -29,6 +32,9 @@ public class AbandogAdoptReviewReply {
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
     private Member member; 
+	
+	@ManyToOne(fetch = FetchType.LAZY) 
+    private AbandogAdoptReview abandogAdoptReview; 
 	
 	private String review_reply_writer;
 	@Column(name="review_reply_content", length=500)

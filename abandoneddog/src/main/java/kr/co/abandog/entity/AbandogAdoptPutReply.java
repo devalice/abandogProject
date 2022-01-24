@@ -12,6 +12,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import javax.persistence.ManyToOne;
+import javax.persistence.FetchType;
 
 @Entity
 @Table(name="abandog_adopt_put_reply")

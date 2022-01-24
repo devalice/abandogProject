@@ -4,9 +4,11 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -44,6 +46,6 @@ public class AbandogList extends BaseEntity {
 	@Column(name="list_datetime", columnDefinition="datetime")
 	private Date list_datetime;
 	
-	@Column(name="list_writer", length=20, nullable=false)
-	private String list_writer;
+	@ManyToOne(fetch = FetchType.LAZY) 
+    private Member member_email; 
 }

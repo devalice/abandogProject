@@ -33,7 +33,8 @@ public class AbandogAdoptReview extends BaseEntity {
 	private String review_title;
 
 
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="review_writer")
     private Member member; 
 	
 	@Column(name="review_content", length=500)

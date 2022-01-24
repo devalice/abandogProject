@@ -15,6 +15,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import kr.co.abandog.entity.Member;
+
 @Entity
 @Table(name="abandog_adopt_review")
 @ToString
@@ -33,9 +35,6 @@ public class AbandogAdoptReview extends BaseEntity {
 
 	@ManyToOne(fetch = FetchType.LAZY) 
     private Member member; 
-	
-	@OneToOne(fetch = FetchType.LAZY) 
-    private Abandog abandog; 
 	
 	@Column(name="review_content", length=500)
 	private String review_content;

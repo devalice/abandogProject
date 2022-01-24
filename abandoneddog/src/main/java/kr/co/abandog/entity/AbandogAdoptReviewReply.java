@@ -26,8 +26,10 @@ public class AbandogAdoptReviewReply {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	@Column(name="review_reply_num")
-	private Integer review_reply_num;
-	@Column(name="review_reply_writer", length=20, nullable=false)
+	
+	@ManyToOne(fetch = FetchType.LAZY) 
+    private Member member; 
+	
 	private String review_reply_writer;
 	@Column(name="review_reply_content", length=500)
 	private String review_reply_content;

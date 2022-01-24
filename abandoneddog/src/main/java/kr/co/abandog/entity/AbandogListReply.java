@@ -6,6 +6,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -33,11 +34,11 @@ public class AbandogListReply extends BaseEntity {
 	private int list_reply_content;
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
+	@JoinColumn(name="list_num")
     private AbandogList list_num; 
 	
-	@Column(name="reply_writer", length=20, nullable=false)
-	private String reply_writer;
-	
 	@ManyToOne(fetch = FetchType.LAZY) 
+	@JoinColumn(name="list_reply_writer")
     private Member member_email; 
+	
 }

@@ -23,8 +23,8 @@ import lombok.ToString;
 public class Member extends BaseEntity{
 	
 	@Id
-	@Column(name="member_id", length=20)
-	private String member_id;
+	@Column(name="member_email", length=30)
+	private String member_email;
 	
 	@Column(name="member_pw", length=20, nullable= false)
 	private String member_pw;
@@ -46,8 +46,5 @@ public class Member extends BaseEntity{
 	
 	@Column(name="admin_yn", length=1, nullable= false, columnDefinition = "char")
 	private String admin_yn;
-	
-	@Column(name="email", length=30, nullable= false)
-	private String email;
 
 }

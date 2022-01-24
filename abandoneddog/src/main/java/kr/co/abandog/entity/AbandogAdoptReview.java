@@ -29,12 +29,20 @@ public class AbandogAdoptReview extends BaseEntity {
 	private Integer review_num;
 	@Column(name="review_title", length=50)
 	private String review_title;
-	@Column(name="review_writer", length=20, nullable=false)
-	private String review_writer;
+
+
+	@ManyToOne(fetch = FetchType.LAZY) 
+    private Member member; 
+	
+	@@OneToOne(fetch = FetchType.LAZY) 
+    private Abandog abandog; 
+	
 	@Column(name="review_content", length=500)
 	private String review_content;
 	@Column(name="review_file", length=100)
 	private String review_file;
 	@Column(name="review_count")
 	private Date review_datetime;
+	
+    
 }

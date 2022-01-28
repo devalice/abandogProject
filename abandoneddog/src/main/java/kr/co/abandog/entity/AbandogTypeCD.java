@@ -23,7 +23,7 @@ import lombok.ToString;
 public class AbandogTypeCD extends BaseEntity{
 	
 	@Id
-	@Column(name="type_cd", length=1, columnDefinition = "char")
+	@Column(name="type_cd", length=2, columnDefinition = "char")
 	private String type_cd;
 	
 	@Column(name="kinds", length=30, nullable= false)

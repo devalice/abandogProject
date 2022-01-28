@@ -3,6 +3,8 @@ package kr.co.abandog.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -23,8 +25,9 @@ import lombok.ToString;
 @NoArgsConstructor
 public class Abandog extends BaseEntity{
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="abandog_id", length=30)
-	private String abandog_id;
+	private Integer abandog_id;
 	
 	@Column(name="abandog_name", length=30, nullable= false)
 	private String abandog_name;
@@ -46,6 +49,9 @@ public class Abandog extends BaseEntity{
 	
 	@Column(name="abandog_image", length=200)
 	private String abandog_image;
+	
+	@Column(name="animal_no")
+	private String animal_no;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="member_email")

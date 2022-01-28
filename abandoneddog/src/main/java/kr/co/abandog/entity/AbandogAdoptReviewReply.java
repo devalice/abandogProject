@@ -32,6 +32,7 @@ public class AbandogAdoptReviewReply {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	@Column(name="review_reply_num")
+	private Integer review_reply_num;
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
 	@JoinColumn(name="review_reply_writer")

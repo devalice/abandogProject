@@ -8,6 +8,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -31,12 +32,14 @@ public class AbandogAdoptReview extends BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	@Column(name="review_num")
 	private Integer review_num;
+	
 	@Column(name="review_title", length=50)
 	private String review_title;
 
 
 	@ManyToOne(fetch = FetchType.LAZY) 
-    private Member member; 
+	@JoinColumn(name="review_writer")
+    private Member member_id;
 	
 	@Column(name="review_content", length=500)
 	private String review_content;

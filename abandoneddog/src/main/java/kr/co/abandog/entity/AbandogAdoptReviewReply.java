@@ -8,6 +8,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -33,18 +34,13 @@ public class AbandogAdoptReviewReply {
 	@Column(name="review_reply_num")
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
-    private Member member; 
+	@JoinColumn(name="review_reply_writer")
+    private Member member_email; 
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
-    private AbandogAdoptReview abandogAdoptReview; 
+	@JoinColumn(name="review_num")
+    private AbandogAdoptReview review_num;
 	
-	private String review_reply_writer;
 	@Column(name="review_reply_content", length=500)
 	private String review_reply_content;
-	@Column(name="review_reply_inst_dtm", nullable=false, columnDefinition="datetime default CURRENT_TIMESTAMP")
-	private Date review_reply_inst_dtm;
-	@Column(name="review_reply_updt_dtm", columnDefinition="datetime")
-	private Date review_reply_updt_dtm;
-	@Column(name="review_reply_del_dtm", columnDefinition="datetime")
-	private Date review_reply_del_dtm;
 }

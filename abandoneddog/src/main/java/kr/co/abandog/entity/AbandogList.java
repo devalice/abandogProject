@@ -8,6 +8,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -47,5 +48,6 @@ public class AbandogList extends BaseEntity {
 	private Date list_datetime;
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
+	@JoinColumn(name="list_writer")
     private Member member_email; 
 }

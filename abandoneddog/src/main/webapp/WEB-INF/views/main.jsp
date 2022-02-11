@@ -24,5 +24,7 @@
 			<td>${map.WAS}</td>
 		</tr>
 	</table>
+	<a href = "login">로그인</a>
+	<a href = "joinmember">회원가입</a>
 </body>
 </html>

@@ -30,4 +30,23 @@ public class PageController {
 
 		return "main";
 	}
+	
+	@GetMapping("/login")
+	public String login(Model model) {
+		
+		return "login";
+
+	}
+	@GetMapping("/joinmember")
+	public String joinmember(Model model) {
+		
+		return "joinmember";
+	}
+	
+	@GetMapping("/find")
+	public String find(Model model) {
+		
+		return "find";
+	}
 }
+

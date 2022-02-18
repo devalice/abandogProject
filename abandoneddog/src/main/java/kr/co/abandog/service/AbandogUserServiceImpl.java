@@ -26,7 +26,7 @@ public class AbandogUserServiceImpl implements AbandogUserService {
 
 	private final MemberRepository memberRepository;
 
-	public String save(MemberDTO dto) {
+	public String joinmember(MemberDTO dto) {
 		
 
 		MemberDTO memberDTO = new MemberDTO();

@@ -36,5 +36,5 @@ public interface AbandogUserService {
 				.build(); 
 		return dto; 
 	} 
-	public String save(MemberDTO member);
+	public String joinmember(MemberDTO member);
 }
